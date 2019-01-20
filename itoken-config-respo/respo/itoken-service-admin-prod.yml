@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: itoken-service-admin
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.75.128:3306/itoken-service-admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8501

@@ -1,0 +1,20 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>iToken - 管理员管理</title>
+    <th:block th:include="includes/head :: head"></th:block>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<th:block th:include="includes/header :: header"></th:block>
+<th:block th:include="includes/menu :: menu"></th:block>
+
+<div class="wrapper">
+    <div class="content-wrapper">
+        <iframe id="iFrame" src="/index" frameborder="0" style="width:100%; height: 768px;"></iframe>
+    </div>
+    <th:block th:include="includes/copyright :: copyright"></th:block>
+</div>
+
+<th:block th:include="includes/foot :: foot"></th:block>
+</body>
+</html>

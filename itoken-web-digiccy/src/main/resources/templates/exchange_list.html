@@ -1,0 +1,72 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>iToken - 交易所管理</title>
+    <th:block th:include="includes/head :: head"></th:block>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<section class="content-header">
+    <h1>
+        交易所管理
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+        <li class="active">控制面板</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">交易所列表</h3>
+                </div>
+
+                <div class="box-body table-responsive">
+                    <table id="dataTable" class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" class="minimal icheck_master"/></th>
+                            <th>交易所名称</th>
+                            <th>交易所代号</th>
+                            <th>交易所网址</th>
+                            <th>更新时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<th:block th:include="includes/foot :: foot"></th:block>
+<script>
+    var _dataTable;
+
+    $(function () {
+        var _columns = [
+            {
+                "data": function (row, type, val, meta) {
+                    return '<input id="' + row.exchGuid + '" type="checkbox" class="minimal" />';
+                }
+            },
+            {"data": "exchName"},
+            {"data": "exchCode"},
+            {"data": "exchUrl"},
+            {
+                "data": function (row, type, val, meta) {
+                    return DateTime.format(row.updateDate, "yyyy-MM-dd HH:mm:ss")
+                }
+            }
+        ];
+
+        _dataTable = App.initDataTables("/exchange/page", _columns);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>iToken - 管理员管理</title>
+    <th:block th:include="includes/head :: head"></th:block>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<section class="content-header">
+    <h1>
+        管理员管理
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+        <li class="active">控制面板</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title" th:text="${tbSysUser != null and tbSysUser.userCode != null ? '编辑管理员' : '新增管理员'}"></h3>
+                </div>
+
+                <form id="inputForm" class="form-horizontal" action="/save" method="post" th:object="${tbSysUser}">
+                    <input type="hidden" name="userCode" th:value="*{userCode}" />
+
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">登录账号</label>
+                            <div class="col-sm-10">
+                                <input name="loginCode" class="form-control required email" placeholder="登录账号" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">用户昵称</label>
+                            <div class="col-sm-10">
+                                <input name="userName" class="form-control required" placeholder="用户昵称" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">登录密码</label>
+                            <div class="col-sm-10">
+                                <input name="password" type="password" class="form-control required" placeholder="登录密码" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-footer">
+                        <button type="button" class="btn btn-default" onclick="history.go(-1);">返回</button>
+                        <button type="submit" class="btn btn-info pull-right">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<th:block th:include="includes/foot :: foot"></th:block>
+</body>
+</html>

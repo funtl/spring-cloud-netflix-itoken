@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>iToken - 文章管理</title>
+    <th:block th:include="includes/head :: head"></th:block>
+    <link href="https://cdn.bootcss.com/jquery.scrollbar/0.2.11/jquery.scrollbar.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{{adminlte}/plugins/nth-tabs/css/nth.tabs.css(adminlte=${adminlte})}"/>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<th:block th:include="includes/header :: header"></th:block>
+<th:block th:include="includes/menu :: menu"></th:block>
+
+<div class="wrapper">
+    <div class="content-wrapper">
+        <div class="nth-tabs common-bg" id="editor-tabs"></div>
+    </div>
+    <th:block th:include="includes/copyright :: copyright"></th:block>
+</div>
+
+<th:block th:include="includes/foot :: foot"></th:block>
+<script src="https://cdn.bootcss.com/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
+<script th:src="@{{adminlte}/plugins/nth-tabs/js/nth.tabs.min.js(adminlte=${adminlte})}"></script>
+<script src="/assets/app/nth-tabs.js"></script>
+<script>
+    $(function () {
+        NthTabs.home("/welcome");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: itoken-web-posts
+
+server:
+  port: 8602

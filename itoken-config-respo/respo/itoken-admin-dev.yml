@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: itoken-admin
+
+server:
+  port: 8084

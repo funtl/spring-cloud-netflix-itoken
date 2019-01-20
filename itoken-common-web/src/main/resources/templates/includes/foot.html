@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body th:fragment="foot">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script th:src="@{{adminlte}/bower_components/jquery/dist/jquery.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/bower_components/jquery-ui/jquery-ui.min.js(adminlte=${adminlte})}"></script>
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<script th:src="@{{adminlte}/bower_components/bootstrap/dist/js/bootstrap.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/bower_components/jquery-slimscroll/jquery.slimscroll.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/plugins/jquery-validation/js/jquery.validate.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/plugins/jquery-validation/js/additional-methods.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/plugins/jquery-validation/js/localization/messages_zh.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/plugins/iCheck/icheck.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/bower_components/datatables.net/js/jquery.dataTables.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/bower_components/fastclick/lib/fastclick.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/dist/js/adminlte.min.js(adminlte=${adminlte})}"></script>
+
+<script src="/assets/app/validate.js"></script>
+<script src="/assets/app/app.js"></script>
+<script src="/assets/app/datetime.js"></script>
+</body>
+</html>

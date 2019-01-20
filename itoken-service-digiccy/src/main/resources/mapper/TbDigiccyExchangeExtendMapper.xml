@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funtl.itoken.service.digiccy.mapper.TbDigiccyExchangeExtendMapper">
+    <resultMap id="BaseResultMap" type="com.funtl.itoken.common.domain.TbDigiccyExchange">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="exch_guid" jdbcType="VARCHAR" property="exchGuid"/>
+        <result column="exch_name" jdbcType="VARCHAR" property="exchName"/>
+        <result column="exch_code" jdbcType="VARCHAR" property="exchCode"/>
+        <result column="exch_url" jdbcType="VARCHAR" property="exchUrl"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_date" jdbcType="TIMESTAMP" property="updateDate"/>
+        <result column="remarks" jdbcType="VARCHAR" property="remarks"/>
+        <result column="extend_s1" jdbcType="VARCHAR" property="extendS1"/>
+        <result column="extend_s2" jdbcType="VARCHAR" property="extendS2"/>
+        <result column="extend_s3" jdbcType="VARCHAR" property="extendS3"/>
+        <result column="extend_s4" jdbcType="VARCHAR" property="extendS4"/>
+        <result column="extend_s5" jdbcType="VARCHAR" property="extendS5"/>
+        <result column="extend_s6" jdbcType="VARCHAR" property="extendS6"/>
+        <result column="extend_s7" jdbcType="VARCHAR" property="extendS7"/>
+        <result column="extend_s8" jdbcType="VARCHAR" property="extendS8"/>
+        <result column="extend_i1" jdbcType="DECIMAL" property="extendI1"/>
+        <result column="extend_i2" jdbcType="DECIMAL" property="extendI2"/>
+        <result column="extend_i3" jdbcType="DECIMAL" property="extendI3"/>
+        <result column="extend_i4" jdbcType="DECIMAL" property="extendI4"/>
+        <result column="extend_f1" jdbcType="DECIMAL" property="extendF1"/>
+        <result column="extend_f2" jdbcType="DECIMAL" property="extendF2"/>
+        <result column="extend_f3" jdbcType="DECIMAL" property="extendF3"/>
+        <result column="extend_f4" jdbcType="DECIMAL" property="extendF4"/>
+        <result column="extend_d1" jdbcType="TIMESTAMP" property="extendD1"/>
+        <result column="extend_d2" jdbcType="TIMESTAMP" property="extendD2"/>
+        <result column="extend_d3" jdbcType="TIMESTAMP" property="extendD3"/>
+        <result column="extend_d4" jdbcType="TIMESTAMP" property="extendD4"/>
+    </resultMap>
+</mapper>

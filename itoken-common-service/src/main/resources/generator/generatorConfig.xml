@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 引入数据库连接配置 -->
+    <properties resource="jdbc.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 配置 tk.mybatis 插件 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.MyMapper"/>
+        </plugin>
+
+        <!-- 配置数据库连接 -->
+        <jdbcConnection
+                driverClass="${jdbc.driverClass}"
+                connectionURL="${jdbc.connectionURL}"
+                userId="${jdbc.username}"
+                password="${jdbc.password}">
+        </jdbcConnection>
+
+        <!-- 配置实体类存放路径 -->
+        <javaModelGenerator targetPackage="com.funtl.itoken.common.domain" targetProject="src/main/java"/>
+
+        <!-- 配置 XML 存放路径 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <!-- 配置 DAO 存放路径 -->
+        <javaClientGenerator
+                targetPackage="com.funtl.itoken.common.mapper"
+                targetProject="src/main/java"
+                type="XMLMAPPER"/>
+
+        <!--&lt;!&ndash; 管理员服务 Begin &ndash;&gt;-->
+        <!--<table catalog="itoken-service-admin" tableName="tb_sys_user">-->
+            <!--<generatedKey column="user_code" sqlStatement="Mysql" identity="false"/>-->
+        <!--</table>-->
+        <!--&lt;!&ndash; 管理员服务 End &ndash;&gt;-->
+
+        <!--&lt;!&ndash; 文章服务 Begin &ndash;&gt;-->
+        <!--<table catalog="itoken-service-posts" tableName="tb_posts_post">-->
+            <!--<generatedKey column="post_guid" sqlStatement="Mysql" identity="false"/>-->
+        <!--</table>-->
+        <!--&lt;!&ndash; 文章服务 End &ndash;&gt;-->
+
+        <!-- 数字货币服务 Begin -->
+        <!-- 交易所列表 -->
+        <!--<table catalog="itoken-service-digiccy" tableName="tb_digiccy_exchange">-->
+            <!--<generatedKey column="exch_guid" sqlStatement="Mysql" identity="false"/>-->
+        <!--</table>-->
+
+        <!-- 交易所实时货币交易数据 -->
+        <table catalog="itoken-service-digiccy" tableName="tb_digiccy_exchange_mkt" />
+        <!-- 数字货币服务 End -->
+    </context>
+</generatorConfiguration>

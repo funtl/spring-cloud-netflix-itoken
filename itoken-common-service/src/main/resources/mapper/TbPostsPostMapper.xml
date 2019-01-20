@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funtl.itoken.common.mapper.TbPostsPostMapper">
+  <resultMap id="BaseResultMap" type="com.funtl.itoken.common.domain.TbPostsPost">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="post_guid" jdbcType="VARCHAR" property="postGuid" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="time_published" jdbcType="TIMESTAMP" property="timePublished" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="alias" jdbcType="VARCHAR" property="alias" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="number_of_upvotes" jdbcType="DECIMAL" property="numberOfUpvotes" />
+    <result column="number_of_downvotes" jdbcType="DECIMAL" property="numberOfDownvotes" />
+    <result column="number_of_reads" jdbcType="DECIMAL" property="numberOfReads" />
+    <result column="number_of_shares" jdbcType="DECIMAL" property="numberOfShares" />
+    <result column="number_of_bookmarks" jdbcType="DECIMAL" property="numberOfBookmarks" />
+    <result column="number_of_comments" jdbcType="DECIMAL" property="numberOfComments" />
+    <result column="reject_msg" jdbcType="VARCHAR" property="rejectMsg" />
+    <result column="access" jdbcType="CHAR" property="access" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="extend_s1" jdbcType="VARCHAR" property="extendS1" />
+    <result column="extend_s2" jdbcType="VARCHAR" property="extendS2" />
+    <result column="extend_s3" jdbcType="VARCHAR" property="extendS3" />
+    <result column="extend_s4" jdbcType="VARCHAR" property="extendS4" />
+    <result column="extend_s5" jdbcType="VARCHAR" property="extendS5" />
+    <result column="extend_s6" jdbcType="VARCHAR" property="extendS6" />
+    <result column="extend_s7" jdbcType="VARCHAR" property="extendS7" />
+    <result column="extend_s8" jdbcType="VARCHAR" property="extendS8" />
+    <result column="extend_i1" jdbcType="DECIMAL" property="extendI1" />
+    <result column="extend_i2" jdbcType="DECIMAL" property="extendI2" />
+    <result column="extend_i3" jdbcType="DECIMAL" property="extendI3" />
+    <result column="extend_i4" jdbcType="DECIMAL" property="extendI4" />
+    <result column="extend_f1" jdbcType="DECIMAL" property="extendF1" />
+    <result column="extend_f2" jdbcType="DECIMAL" property="extendF2" />
+    <result column="extend_f3" jdbcType="DECIMAL" property="extendF3" />
+    <result column="extend_f4" jdbcType="DECIMAL" property="extendF4" />
+    <result column="extend_d1" jdbcType="TIMESTAMP" property="extendD1" />
+    <result column="extend_d2" jdbcType="TIMESTAMP" property="extendD2" />
+    <result column="extend_d3" jdbcType="TIMESTAMP" property="extendD3" />
+    <result column="extend_d4" jdbcType="TIMESTAMP" property="extendD4" />
+    <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
+    <result column="main" jdbcType="LONGVARCHAR" property="main" />
+    <result column="authors" jdbcType="LONGVARCHAR" property="authors" />
+    <result column="thumb_image" jdbcType="LONGVARCHAR" property="thumbImage" />
+    <result column="original_images" jdbcType="LONGVARCHAR" property="originalImages" />
+    <result column="images" jdbcType="LONGVARCHAR" property="images" />
+    <result column="full_size_images" jdbcType="LONGVARCHAR" property="fullSizeImages" />
+    <result column="tags" jdbcType="LONGVARCHAR" property="tags" />
+    <result column="v_tags" jdbcType="LONGVARCHAR" property="vTags" />
+    <result column="series" jdbcType="LONGVARCHAR" property="series" />
+  </resultMap>
+</mapper>

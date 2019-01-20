@@ -1,0 +1,14 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://192.168.75.128:8084
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
